@@ -1,6 +1,8 @@
 from utils.data_loader import load_data
 from backtest_engine.engine import run_backtest
 import pandas as pd
+from backtest_engine.cli import main
+
 
 csv_hour = 'data/nq-1h_bk.csv'
 csv_minute = 'data/nq-1m_bk.csv'
@@ -37,5 +39,5 @@ def main():
     results_df.to_csv(output_file, index=False)
     print(f"\n💾 Results saved to '{output_file}'.")
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
